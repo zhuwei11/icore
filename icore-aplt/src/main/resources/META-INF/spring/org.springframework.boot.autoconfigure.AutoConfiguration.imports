@@ -1,0 +1,8 @@
+cn.zw.icore.ap.base.config.BaseSwaggerConfig
+cn.zw.icore.ap.base.config.BaseBootConfig
+cn.zw.icore.ap.base.config.BaseWebConfiguration
+cn.zw.icore.ap.base.config.BaseServiceConfig
+cn.zw.icore.ap.base.config.MybatisConfig
+cn.zw.icore.ap.base.config.BaseEnvConfig
+
+

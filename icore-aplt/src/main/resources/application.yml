@@ -1,0 +1,28 @@
+server:
+  port: ${SERVER_PORT:8010}
+spring:
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:${DATASOURCE_DBTYPE:mysql}://${DATASOURCE_HOST:localhost}:${DATASOURCE_PORT:3306}/demo?characterEncoding=UTF-8&useUnicode=true&useSSL=false
+    username: ${DATASOURCE_USERNAME:root}
+    password: ${DATASOURCE_PASSWORD:Weiwei111}
+
+# 日志相关
+logging:
+  level:
+    io.github.opensabre: info
+  logback:
+    rollingpolicy:
+      max-file-size: 1GB
+  file:
+    path: logs/
+  config: classpath:logback-icore.xml
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      logic-delete-value: "Y" # 逻辑已删除值(默认为 Y)
+      logic-not-delete-value: "N" # 逻辑未删除值(默认为 N)
